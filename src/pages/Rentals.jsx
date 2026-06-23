@@ -26,11 +26,13 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
+  Store,
   Wifi,
 } from 'lucide-react';
 import { samuiVisuals } from '@/lib/visuals';
 import { cn } from '@/lib/utils';
 import { useGame } from '@/lib/gamification';
+import { buildLocalizedRentalMessage, useLanguage } from '@/lib/i18n';
 
 const locations = ['All', 'Chaweng', 'Lamai', 'Bophut', 'Maenam', 'Bangrak'];
 const priceFilters = ['All', 'Budget', 'Monthly', 'Luxury', 'Verified'];
@@ -119,20 +121,9 @@ const stays = [
   },
 ];
 
-const buildWhatsAppMessage = (listing, request) => {
-  const lines = [
-    `Hi, I found ${listing.title} on Samui Connect.`,
-    `Location: ${listing.location}`,
-    `Price: ${listing.price}`,
-    request.date ? `Date: ${request.date}` : null,
-    request.duration ? `Duration: ${request.duration}` : null,
-    request.name ? `Name: ${request.name}` : null,
-    request.note ? `Message: ${request.note}` : null,
-  ].filter(Boolean);
-  return encodeURIComponent(lines.join('\n'));
-};
 
 function ListingCard({ item, mode, onRequest }) {
+  const { t } = useLanguage();
   const Icon = mode === 'vehicles' ? (item.type === 'Car' ? Car : Bike) : Building2;
 
   return (
@@ -150,7 +141,7 @@ function ListingCard({ item, mode, onRequest }) {
           </Badge>
           {item.verified && (
             <Badge className="border-primary/35 bg-primary/20 text-primary backdrop-blur-xl">
-              <ShieldCheck className="mr-1 h-3 w-3" /> Verified
+              <ShieldCheck className="mr-1 h-3 w-3" /> {t('common.verified')}
             </Badge>
           )}
         </div>
@@ -168,7 +159,7 @@ function ListingCard({ item, mode, onRequest }) {
           </div>
           <div className="rounded-2xl border border-yellow-400/20 bg-yellow-400/10 px-3 py-2 text-right">
             <div className="flex items-center gap-1 text-xs font-black text-yellow-300"><Star className="h-3 w-3 fill-current" /> {item.rating}</div>
-            <p className="text-[10px] text-yellow-100/60">trusted</p>
+            <p className="text-[10px] text-yellow-100/60">{t('common.trusted')}</p>
           </div>
         </div>
 
@@ -185,7 +176,7 @@ function ListingCard({ item, mode, onRequest }) {
         </div>
 
         <Button onClick={() => onRequest(item)} className="h-12 w-full rounded-2xl font-black shadow-[0_0_22px_hsl(var(--primary)/0.22)]">
-          <MessageCircle className="mr-2 h-4 w-4" /> Check Availability
+          <MessageCircle className="mr-2 h-4 w-4" /> {t('rentals.checkAvailability')}
         </Button>
       </div>
     </motion.article>
@@ -200,6 +191,7 @@ export default function Rentals() {
   const [selected, setSelected] = useState(null);
   const [request, setRequest] = useState({ name: '', date: '', duration: '', note: '' });
   const game = useGame();
+  const { t } = useLanguage();
 
   const activeData = tab === 'vehicles' ? vehicles : stays;
   const filtered = useMemo(() => activeData.filter((item) => {
@@ -216,10 +208,16 @@ export default function Rentals() {
   const submitRequest = () => {
     if (!selected) return;
     game.award('rental-request', 35, { once: false, label: `Rental request: ${selected.title}`, emoji: selected.type === 'Villa' ? '🏝️' : '🛵' });
-    const text = buildWhatsAppMessage(selected, request);
+    const text = buildLocalizedRentalMessage(t, selected, request);
     window.open(`https://wa.me/?text=${text}`, '_blank', 'noopener,noreferrer');
     setSelected(null);
     setRequest({ name: '', date: '', duration: '', note: '' });
+  };
+
+  const requestProviderAccess = () => {
+    const text = encodeURIComponent(`${t('whatsapp.providerIntro')}\n${t('whatsapp.message')}: `);
+    game.award('provider-interest', 25, { once: true, label: 'Provider access requested', emoji: '🏪' });
+    window.open(`https://wa.me/?text=${text}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -230,17 +228,17 @@ export default function Rentals() {
         <div className="relative p-4 pb-5">
           <div className="mb-20 flex items-center justify-between">
             <Badge className="border-primary/30 bg-primary/15 text-[10px] font-black uppercase tracking-[0.16em] text-primary backdrop-blur-xl">
-              <Sparkles className="mr-1.5 h-3.5 w-3.5" /> Island Marketplace
+              <Sparkles className="mr-1.5 h-3.5 w-3.5" /> {t('rentals.marketplace')}
             </Badge>
             <Badge variant="outline" className="border-white/15 bg-black/35 text-white backdrop-blur-xl">
               +35 XP/request
             </Badge>
           </div>
           <h1 className="font-heading text-3xl font-black leading-[0.98] text-white drop-shadow-lg">
-            Rent vehicles & find stays on Samui
+            {t('rentals.heroTitle')}
           </h1>
           <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/75">
-            Verified scooters, cars, villas and monthly stays. Fast WhatsApp requests without booking chaos.
+            {t('rentals.heroText')}
           </p>
         </div>
       </section>
@@ -248,10 +246,10 @@ export default function Rentals() {
       <Tabs value={tab} onValueChange={setTab} className="mb-5">
         <TabsList className="grid h-12 w-full grid-cols-2 rounded-2xl border border-white/10 bg-secondary/60 p-1">
           <TabsTrigger value="vehicles" className="rounded-xl font-black data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-            <Bike className="mr-2 h-4 w-4" /> Vehicles
+            <Bike className="mr-2 h-4 w-4" /> {t('rentals.vehicles')}
           </TabsTrigger>
           <TabsTrigger value="stays" className="rounded-xl font-black data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-            <Home className="mr-2 h-4 w-4" /> Stays
+            <Home className="mr-2 h-4 w-4" /> {t('rentals.stays')}
           </TabsTrigger>
         </TabsList>
 
@@ -261,7 +259,7 @@ export default function Rentals() {
             <Input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder={tab === 'vehicles' ? 'Search scooter, car, Chaweng...' : 'Search villa, apartment, monthly...'}
+              placeholder={tab === 'vehicles' ? t('rentals.searchVehicles') : t('rentals.searchStays')}
               className="h-12 rounded-2xl border-white/10 bg-card/70 pl-11 font-semibold"
             />
           </div>
@@ -290,13 +288,33 @@ export default function Rentals() {
         </TabsContent>
       </Tabs>
 
+      {filtered.length === 0 && (
+        <div className="mb-5 rounded-[1.5rem] border border-white/10 bg-card p-6 text-center">
+          <p className="text-sm font-bold text-foreground">{t('rentals.noResults')}</p>
+        </div>
+      )}
+
+      <div className="mb-5 overflow-hidden rounded-[1.7rem] border border-primary/20 bg-primary/10 p-4">
+        <div className="flex items-start gap-3">
+          <Store className="mt-0.5 h-5 w-5 text-primary" />
+          <div className="flex-1">
+            <h3 className="text-sm font-black text-foreground">{t('rentals.providerTitle')}</h3>
+            <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{t('rentals.providerText')}</p>
+            <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">{t('rentals.providerNote')}</p>
+            <Button onClick={requestProviderAccess} variant="secondary" className="mt-3 h-10 rounded-xl font-black">
+              <MessageCircle className="mr-2 h-4 w-4" /> {t('rentals.providerCta')}
+            </Button>
+          </div>
+        </div>
+      </div>
+
       <div className="mb-8 rounded-[1.5rem] border border-primary/15 bg-primary/10 p-4">
         <div className="flex items-start gap-3">
           <CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" />
           <div>
-            <h3 className="text-sm font-black text-foreground">Trust-first marketplace</h3>
+            <h3 className="text-sm font-black text-foreground">{t('rentals.trustTitle')}</h3>
             <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-              Clear prices, verified providers, WhatsApp request flow and no direct payment until the offer is confirmed.
+              {t('rentals.trustText')}
             </p>
           </div>
         </div>
@@ -310,7 +328,7 @@ export default function Rentals() {
                 <img src={selected.image} alt={selected.title} className="h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-xs font-black uppercase tracking-[0.16em] text-primary">Request availability</p>
+                  <p className="text-xs font-black uppercase tracking-[0.16em] text-primary">{t('rentals.requestAvailability')}</p>
                   <DialogHeader className="mt-1 text-left">
                     <DialogTitle className="font-heading text-xl font-black text-white">{selected.title}</DialogTitle>
                     <DialogDescription className="text-white/70">{selected.location} · {selected.price}</DialogDescription>
@@ -318,21 +336,21 @@ export default function Rentals() {
                 </div>
               </div>
               <div className="space-y-3 p-4">
-                <Input placeholder="Your name" value={request.name} onChange={(e) => setRequest({ ...request, name: e.target.value })} className="h-11 rounded-xl" />
+                <Input placeholder={t('rentals.yourName')} value={request.name} onChange={(e) => setRequest({ ...request, name: e.target.value })} className="h-11 rounded-xl" />
                 <div className="grid grid-cols-2 gap-3">
                   <div className="relative">
                     <CalendarDays className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                    <Input placeholder="Date" value={request.date} onChange={(e) => setRequest({ ...request, date: e.target.value })} className="h-11 rounded-xl pl-9" />
+                    <Input placeholder={t('rentals.date')} value={request.date} onChange={(e) => setRequest({ ...request, date: e.target.value })} className="h-11 rounded-xl pl-9" />
                   </div>
-                  <Input placeholder="Duration" value={request.duration} onChange={(e) => setRequest({ ...request, duration: e.target.value })} className="h-11 rounded-xl" />
+                  <Input placeholder={t('rentals.duration')} value={request.duration} onChange={(e) => setRequest({ ...request, duration: e.target.value })} className="h-11 rounded-xl" />
                 </div>
-                <Textarea placeholder="Short message: pickup area, monthly request, special needs..." value={request.note} onChange={(e) => setRequest({ ...request, note: e.target.value })} className="min-h-24 rounded-xl" />
+                <Textarea placeholder={t('rentals.shortMessage')} value={request.note} onChange={(e) => setRequest({ ...request, note: e.target.value })} className="min-h-24 rounded-xl" />
                 <div className="rounded-xl border border-white/10 bg-secondary/50 p-3">
-                  <div className="flex items-center gap-2 text-xs font-black text-foreground"><Wifi className="h-4 w-4 text-primary" /> Fast request, no payment in app</div>
-                  <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">This opens WhatsApp with a ready-made message. Later this can become a provider dashboard.</p>
+                  <div className="flex items-center gap-2 text-xs font-black text-foreground"><Wifi className="h-4 w-4 text-primary" /> {t('rentals.fastRequestTitle')}</div>
+                  <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">{t('rentals.fastRequestText')}</p>
                 </div>
                 <Button onClick={submitRequest} className="h-12 w-full rounded-2xl font-black">
-                  <MessageCircle className="mr-2 h-4 w-4" /> Send WhatsApp Request
+                  <MessageCircle className="mr-2 h-4 w-4" /> {t('rentals.sendRequest')}
                 </Button>
               </div>
             </>

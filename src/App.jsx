@@ -9,6 +9,7 @@ import ProtectedRoute from '@/components/ProtectedRoute';
 import ScrollToTop from './components/ScrollToTop';
 import GameOverlay from '@/components/gamification/GameOverlay';
 import ServiceWorkerCleaner from '@/components/ServiceWorkerCleaner';
+import { LanguageProvider } from '@/lib/i18n';
 
 // Auth pages
 import Login from '@/pages/Login';
@@ -18,6 +19,9 @@ import ResetPassword from '@/pages/ResetPassword';
 
 // App pages
 import Landing from '@/pages/Landing';
+import LegalPage from '@/pages/LegalPage';
+import Contact from '@/pages/Contact';
+import ProviderDashboard from '@/pages/ProviderDashboard';
 import Onboarding from '@/pages/Onboarding';
 import Home from '@/pages/Home';
 import RoomChat from '@/pages/RoomChat';
@@ -35,7 +39,7 @@ import Profile from '@/pages/Profile';
 import AppLayout from '@/components/layout/AppLayout';
 
 const AuthenticatedApp = () => {
-  const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
+  const { isLoadingAuth, isLoadingPublicSettings, authError } = useAuth();
 
   if (isLoadingPublicSettings || isLoadingAuth) {
     return (
@@ -48,42 +52,48 @@ const AuthenticatedApp = () => {
     );
   }
 
-  if (authError) {
-    if (authError.type === 'user_not_registered') {
-      return <UserNotRegisteredError />;
-    } else if (authError.type === 'auth_required') {
-      navigateToLogin();
-      return null;
-    }
+  if (authError?.type === 'user_not_registered') {
+    return <UserNotRegisteredError />;
   }
 
   return (
     <Routes>
       {/* Public */}
-      <Route path="/welcome" element={<Landing />} />
+      <Route path="/" element={<Landing />} />
+      <Route path="/welcome" element={<Navigate to="/" replace />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password" element={<ResetPassword />} />
 
       {/* Protected */}
-      <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/welcome" replace />} />}>
+      <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
         <Route path="/onboarding" element={<Onboarding />} />
+        <Route path="/app/onboarding" element={<Onboarding />} />
         <Route path="/room/:roomId" element={<RoomChat />} />
+        <Route path="/app/room/:roomId" element={<RoomChat />} />
         <Route path="/dm/:threadId" element={<DMChat />} />
+        <Route path="/app/dm/:threadId" element={<DMChat />} />
         <Route path="/events/new" element={<NewEvent />} />
+        <Route path="/app/events/new" element={<NewEvent />} />
         <Route path="/work/new" element={<NewWorkPost />} />
+        <Route path="/app/work/new" element={<NewWorkPost />} />
         
         <Route element={<AppLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/explore" element={<Explore />} />
-          <Route path="/messages" element={<Messages />} />
-          <Route path="/rentals" element={<Rentals />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/app" element={<Home />} />
+          <Route path="/app/explore" element={<Explore />} />
+          <Route path="/app/messages" element={<Messages />} />
+          <Route path="/app/rentals" element={<Rentals />} />
+          <Route path="/app/events" element={<Events />} />
+          <Route path="/app/work" element={<Work />} />
+          <Route path="/app/profile" element={<Profile />} />
         </Route>
       </Route>
+
+      <Route path="/legal/privacy" element={<LegalPage type="privacy" />} />
+      <Route path="/legal/terms" element={<LegalPage type="terms" />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/provider" element={<ProviderDashboard />} />
 
       <Route path="*" element={<PageNotFound />} />
     </Routes>
@@ -92,8 +102,9 @@ const AuthenticatedApp = () => {
 
 function App() {
   return (
-    <AuthProvider>
-      <QueryClientProvider client={queryClientInstance}>
+    <LanguageProvider>
+      <AuthProvider>
+        <QueryClientProvider client={queryClientInstance}>
         <Router>
           <ScrollToTop />
           <AuthenticatedApp />
@@ -101,8 +112,9 @@ function App() {
         <Toaster />
         <GameOverlay />
         <ServiceWorkerCleaner />
-      </QueryClientProvider>
-    </AuthProvider>
+        </QueryClientProvider>
+      </AuthProvider>
+    </LanguageProvider>
   )
 }
 

@@ -66,7 +66,7 @@ export default function Work() {
               <Briefcase className="h-3.5 w-3.5" /> Work Connect
             </div>
             <Link
-              to="/work/new"
+              to="/app/work/new"
               className="flex items-center gap-1 rounded-full bg-primary px-3 py-1.5 text-xs font-black text-primary-foreground shadow-[0_0_22px_hsl(var(--primary)/.35)]"
             >
               <Plus className="h-3.5 w-3.5" /> Post

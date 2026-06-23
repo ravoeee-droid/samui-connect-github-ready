@@ -87,7 +87,7 @@ export default function Events() {
           <p className="text-xs text-muted-foreground">Join, share and earn island status.</p>
         </div>
         <Button asChild className="rounded-full font-black" size="sm">
-          <Link to="/events/new"><CalendarPlus className="mr-1.5 h-4 w-4" /> Host</Link>
+          <Link to="/app/events/new"><CalendarPlus className="mr-1.5 h-4 w-4" /> Host</Link>
         </Button>
       </div>
 

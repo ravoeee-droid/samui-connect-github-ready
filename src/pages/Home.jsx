@@ -70,11 +70,11 @@ export default function Home() {
               <span className="text-xs font-black tracking-wide text-white">Samui Connect</span>
             </div>
             {myProfile?.avatar_url ? (
-              <Link to="/profile">
+              <Link to="/app/profile">
                 <img src={myProfile.avatar_url} alt="" className="h-10 w-10 rounded-full object-cover ring-2 ring-primary/50" />
               </Link>
             ) : (
-              <Link to="/profile" className="grid h-10 w-10 place-items-center rounded-full bg-black/35 ring-1 ring-white/15 backdrop-blur-xl">
+              <Link to="/app/profile" className="grid h-10 w-10 place-items-center rounded-full bg-black/35 ring-1 ring-white/15 backdrop-blur-xl">
                 <span className="text-sm font-black text-white">
                   {myProfile?.display_name?.[0]?.toUpperCase() || '?'}
                 </span>
@@ -153,12 +153,12 @@ export default function Home() {
           <h2 className="font-heading text-lg font-black flex items-center gap-2">
             <Store className="h-4 w-4 text-primary" /> Rentals & Stays
           </h2>
-          <Link to="/rentals" className="rounded-full bg-primary/10 px-3 py-1.5 text-xs font-black text-primary">
+          <Link to="/app/rentals" className="rounded-full bg-primary/10 px-3 py-1.5 text-xs font-black text-primary">
             Explore
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-3">
-          <Link to="/rentals" className="group relative h-36 overflow-hidden rounded-[1.5rem] border border-white/10 bg-card shadow-[0_18px_55px_rgba(0,0,0,.22)]">
+          <Link to="/app/rentals" className="group relative h-36 overflow-hidden rounded-[1.5rem] border border-white/10 bg-card shadow-[0_18px_55px_rgba(0,0,0,.22)]">
             <img src={samuiVisuals.vehicles} alt="Vehicles" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
             <div className="relative flex h-full flex-col justify-end p-3">
@@ -167,7 +167,7 @@ export default function Home() {
               <p className="mt-0.5 text-[11px] text-white/65">Verified island rentals</p>
             </div>
           </Link>
-          <Link to="/rentals" className="group relative h-36 overflow-hidden rounded-[1.5rem] border border-white/10 bg-card shadow-[0_18px_55px_rgba(0,0,0,.22)]">
+          <Link to="/app/rentals" className="group relative h-36 overflow-hidden rounded-[1.5rem] border border-white/10 bg-card shadow-[0_18px_55px_rgba(0,0,0,.22)]">
             <img src={samuiVisuals.stays} alt="Stays" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
             <div className="relative flex h-full flex-col justify-end p-3">
@@ -205,7 +205,7 @@ export default function Home() {
             <Sparkles className="h-4 w-4 text-primary" />
             Happening Now
           </h2>
-          <Link to="/events/new" className="flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-black text-primary">
+          <Link to="/app/events/new" className="flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-black text-primary">
             <Plus className="h-3 w-3" /> Post Event
           </Link>
         </div>

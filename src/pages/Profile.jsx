@@ -13,6 +13,8 @@ import {
   LogOut, Camera, MapPin, Edit3, Check, X
 } from 'lucide-react';
 import LevelCard from '@/components/gamification/LevelCard';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { useLanguage } from '@/lib/i18n';
 import { samuiVisuals } from '@/lib/visuals';
 
 const INTEREST_LABELS = {
@@ -26,6 +28,7 @@ const LANG_FLAGS = { en: '🇬🇧 English', de: '🇩🇪 Deutsch', fr: '🇫�
 
 export default function Profile() {
   const { user } = useAuth();
+  const { t } = useLanguage();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
   const [editing, setEditing] = useState(false);
@@ -152,6 +155,17 @@ export default function Profile() {
 
       {/* Info Cards */}
       <div className="space-y-3">
+
+        <div className="p-4 rounded-2xl bg-card border border-border/50">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-xs text-muted-foreground mb-1 font-medium">{t('language.title')}</p>
+              <p className="text-xs leading-relaxed text-muted-foreground">{t('language.subtitle')}</p>
+            </div>
+            <LanguageSwitcher />
+          </div>
+        </div>
+
         {/* Bio */}
         <div className="p-4 rounded-2xl bg-card border border-border/50">
           <p className="text-xs text-muted-foreground mb-2 font-medium">About</p>

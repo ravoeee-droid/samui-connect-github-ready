@@ -18,16 +18,16 @@ const LANGUAGES = [
 ];
 
 const INTERESTS = [
+  { id: 'meet-people', label: 'Meet people', emoji: '👋' },
+  { id: 'events', label: 'Find events', emoji: '🌅' },
+  { id: 'rent-vehicle', label: 'Rent vehicle', emoji: '🛵' },
+  { id: 'find-stay', label: 'Find stay', emoji: '🏝️' },
+  { id: 'work-network', label: 'Work/network', emoji: '💻' },
+  { id: 'family-life', label: 'Family life', emoji: '👨‍👩‍👧' },
   { id: 'snorkeling', label: 'Snorkeling', emoji: '🤿' },
   { id: 'party', label: 'Party', emoji: '🎉' },
-  { id: 'bars', label: 'Bars', emoji: '🍸' },
-  { id: 'pool', label: 'Pool', emoji: '🏊' },
-  { id: 'billiard', label: 'Billiard', emoji: '🎱' },
-  { id: 'coworking', label: 'Coworking', emoji: '💻' },
-  { id: 'website', label: 'Website', emoji: '🌐' },
-  { id: 'designer', label: 'Designer', emoji: '🎨' },
-  { id: 'social-media', label: 'Social Media', emoji: '📱' },
-  { id: 'support', label: 'Support', emoji: '🤝' },
+  { id: 'food', label: 'Food & bars', emoji: '🍸' },
+  { id: 'local-services', label: 'Local services', emoji: '🤝' },
 ];
 
 const AREAS = [
@@ -78,7 +78,7 @@ export default function Onboarding() {
     setProfile(p => {
       const has = p.interests.includes(id);
       if (has) return { ...p, interests: p.interests.filter(i => i !== id) };
-      if (p.interests.length >= 3) return p;
+      if (p.interests.length >= 4) return p;
       return { ...p, interests: [...p.interests, id] };
     });
   };
@@ -199,7 +199,7 @@ export default function Onboarding() {
             {step === 3 && (
               <div className="flex-1 flex flex-col">
                 <h1 className="text-2xl font-bold font-heading mb-2">What are you here for?</h1>
-                <p className="text-muted-foreground mb-8">Pick 1–3 interests</p>
+                <p className="text-muted-foreground mb-8">Pick 1–4 goals so your home feed feels personal</p>
                 <div className="grid grid-cols-2 gap-3">
                   {INTERESTS.map(item => (
                     <button
