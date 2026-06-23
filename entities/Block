@@ -1,0 +1,13 @@
+{
+  "name": "Block",
+  "type": "object",
+  "properties": {
+    "blocked_user_id": {
+      "type": "string",
+      "description": "ID of the blocked user"
+    }
+  },
+  "required": [
+    "blocked_user_id"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "WorkPost",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Post title"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "request",
+        "offer"
+      ],
+      "description": "Whether this is a request or offer"
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "Suche",
+        "Biete",
+        "Collab",
+        "Empfehlung gesucht"
+      ]
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Website",
+        "Designer",
+        "Social Media",
+        "Fotograf",
+        "Ads/Marketing",
+        "VA/Support",
+        "Sales/Closer",
+        "Branding",
+        "Content Creation",
+        "Video Editing",
+        "Automation",
+        "Leadgen",
+        "Other"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "samui_area": {
+      "type": "string",
+      "enum": [
+        "Chaweng",
+        "Lamai",
+        "Bophut",
+        "Maenam",
+        "Remote"
+      ]
+    },
+    "creator_name": {
+      "type": "string"
+    },
+    "creator_avatar": {
+      "type": "string"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "title",
+    "type",
+    "category"
+  ]
+}

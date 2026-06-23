@@ -1,0 +1,27 @@
+{
+  "name": "DirectMessage",
+  "type": "object",
+  "properties": {
+    "thread_id": {
+      "type": "string",
+      "description": "ID of the direct thread"
+    },
+    "sender_id": {
+      "type": "string"
+    },
+    "sender_name": {
+      "type": "string"
+    },
+    "sender_avatar": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string",
+      "description": "Message content"
+    }
+  },
+  "required": [
+    "thread_id",
+    "content"
+  ]
+}

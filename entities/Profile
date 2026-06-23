@@ -1,0 +1,91 @@
+{
+  "name": "Profile",
+  "type": "object",
+  "properties": {
+    "display_name": {
+      "type": "string",
+      "description": "User's display name"
+    },
+    "avatar_url": {
+      "type": "string",
+      "description": "URL to user's avatar image"
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Languages the user speaks"
+    },
+    "nationality": {
+      "type": "string",
+      "description": "User's nationality"
+    },
+    "samui_area": {
+      "type": "string",
+      "enum": [
+        "Chaweng",
+        "Lamai",
+        "Bophut",
+        "Maenam",
+        "Just Traveling"
+      ],
+      "description": "Current area on Samui"
+    },
+    "interests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "User's selected interests"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short bio"
+    },
+    "is_verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "online",
+        "today",
+        "tonight",
+        "this_week",
+        "offline"
+      ],
+      "default": "online"
+    },
+    "work_activity": {
+      "type": "string",
+      "description": "What the user does professionally"
+    },
+    "work_availability": {
+      "type": "string",
+      "enum": [
+        "available_now",
+        "this_week",
+        "not_available"
+      ],
+      "description": "Work availability status"
+    },
+    "contact_instagram": {
+      "type": "string"
+    },
+    "contact_website": {
+      "type": "string"
+    },
+    "contact_whatsapp": {
+      "type": "string"
+    },
+    "onboarding_complete": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "display_name"
+  ]
+}

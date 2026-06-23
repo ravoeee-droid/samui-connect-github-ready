@@ -1,0 +1,30 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "room_id": {
+      "type": "string",
+      "description": "ID of the room this message belongs to"
+    },
+    "sender_name": {
+      "type": "string",
+      "description": "Display name of the sender"
+    },
+    "sender_avatar": {
+      "type": "string",
+      "description": "Avatar URL of the sender"
+    },
+    "content": {
+      "type": "string",
+      "description": "Message content"
+    },
+    "is_flagged": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "room_id",
+    "content"
+  ]
+}

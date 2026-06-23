@@ -1,0 +1,54 @@
+{
+  "name": "Room",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Room name"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly room identifier"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "social",
+        "work"
+      ],
+      "description": "Room category"
+    },
+    "subcategory": {
+      "type": "string",
+      "enum": [
+        "activities",
+        "nightlife",
+        "coworking",
+        "b2b"
+      ],
+      "description": "Room subcategory"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short room description"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon name for the room"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "online_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Simulated online count"
+    }
+  },
+  "required": [
+    "name",
+    "slug",
+    "category"
+  ]
+}

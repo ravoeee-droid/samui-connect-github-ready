@@ -1,0 +1,40 @@
+{
+  "name": "Report",
+  "type": "object",
+  "properties": {
+    "reporter_id": {
+      "type": "string"
+    },
+    "target_user_id": {
+      "type": "string"
+    },
+    "target_message_id": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string",
+      "enum": [
+        "spam",
+        "harassment",
+        "fake",
+        "inappropriate",
+        "other"
+      ]
+    },
+    "details": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "reviewed",
+        "resolved"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "reason"
+  ]
+}
