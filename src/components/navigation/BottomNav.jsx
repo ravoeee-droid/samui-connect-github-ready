@@ -6,11 +6,11 @@ import { useGame } from '@/lib/gamification';
 import { useLanguage } from '@/lib/i18n';
 
 const navItems = [
-  { path: '/app', icon: Home, labelKey: 'nav.home' },
-  { path: '/app/explore', icon: Compass, labelKey: 'nav.connect' },
-  { path: '/app/rentals', icon: Store, labelKey: 'nav.rentals' },
-  { path: '/app/events', icon: CalendarDays, labelKey: 'nav.events' },
-  { path: '/app/profile', icon: User, labelKey: 'nav.profile' },
+  { path: '/', icon: Home, labelKey: 'nav.home' },
+  { path: '/explore', icon: Compass, labelKey: 'nav.connect' },
+  { path: '/rentals', icon: Store, labelKey: 'nav.rentals' },
+  { path: '/events', icon: CalendarDays, labelKey: 'nav.events' },
+  { path: '/profile', icon: User, labelKey: 'nav.profile' },
 ];
 
 export default function BottomNav() {

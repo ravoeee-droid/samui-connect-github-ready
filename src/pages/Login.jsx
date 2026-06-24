@@ -17,7 +17,7 @@ export default function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const afterLogin = "/app";
+  const afterLogin = "/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,7 +47,7 @@ export default function Login() {
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_12%_0%,hsl(var(--primary)/.22),transparent_32%),radial-gradient(circle_at_88%_8%,rgba(236,72,153,.18),transparent_30%),linear-gradient(180deg,rgba(255,255,255,.04),transparent_44%)]" />
 
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8">
-        <Link to="/" className="flex items-center gap-2 text-sm font-black text-muted-foreground hover:text-foreground">
+        <Link to="/landing" className="flex items-center gap-2 text-sm font-black text-muted-foreground hover:text-foreground">
           <ArrowLeft className="h-4 w-4" /> Landingpage
         </Link>
         <LanguageSwitcher />

@@ -26,7 +26,7 @@ export default function Landing() {
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_12%_0%,hsl(var(--primary)/.22),transparent_32%),radial-gradient(circle_at_88%_8%,rgba(236,72,153,.18),transparent_30%),linear-gradient(180deg,rgba(255,255,255,.04),transparent_44%)]" />
 
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8">
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/landing" className="flex items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-[0_15px_45px_hsl(var(--primary)/.35)]">
             <Sparkles className="h-5 w-5" />
           </div>

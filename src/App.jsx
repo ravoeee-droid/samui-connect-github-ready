@@ -59,8 +59,8 @@ const AuthenticatedApp = () => {
   return (
     <Routes>
       {/* Public */}
-      <Route path="/" element={<Landing />} />
-      <Route path="/welcome" element={<Navigate to="/" replace />} />
+      <Route path="/landing" element={<Landing />} />
+      <Route path="/welcome" element={<Navigate to="/landing" replace />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -80,6 +80,16 @@ const AuthenticatedApp = () => {
         <Route path="/app/work/new" element={<NewWorkPost />} />
         
         <Route element={<AppLayout />}>
+          {/* Main app restored on original URLs */}
+          <Route path="/" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/messages" element={<Messages />} />
+          <Route path="/rentals" element={<Rentals />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/profile" element={<Profile />} />
+
+          {/* Optional app namespace */}
           <Route path="/app" element={<Home />} />
           <Route path="/app/explore" element={<Explore />} />
           <Route path="/app/messages" element={<Messages />} />
