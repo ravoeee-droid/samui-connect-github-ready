@@ -5,345 +5,211 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow,noarchive">
   <meta name="theme-color" content="#10271f">
-  <meta name="description" content="HAMEL – Landwirtschaft, Tiervermarktung und Logistik aus Romrod-Zell. Seit über 200 Jahren Partner landwirtschaftlicher Betriebe.">
   <title>HAMEL | Landwirtschaft · Tiervermarktung · Logistik</title>
+  <meta name="description" content="HAMEL verbindet Landwirtschaft, Tiervermarktung und Logistik aus Romrod-Zell – seit über 200 Jahren und in siebter Generation.">
+  <meta property="og:title" content="HAMEL | Landwirtschaft · Tiervermarktung · Logistik">
+  <meta property="og:description" content="Verlässliche Wege für Landwirtschaft, Vermarktung und Logistik.">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Volker Hamel GmbH",
+    "alternateName":"HAMEL",
+    "email":"info@viehhandlung-hamel.de",
+    "telephone":"+49 6636 363",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Billertshäuser Str. 1",
+      "postalCode":"36329",
+      "addressLocality":"Romrod",
+      "addressCountry":"DE"
+    }
+  }
+  </script>
   <style>
     :root{
-      --forest:#10271f;
-      --forest-2:#19362b;
-      --ink:#122019;
-      --paper:#f3efe5;
-      --paper-2:#e6dfd1;
-      --white:#fffdf8;
-      --clay:#a95f39;
-      --clay-soft:#d7a17e;
-      --sage:#aeb9a7;
-      --line:rgba(18,32,25,.16);
-      --line-light:rgba(255,255,255,.18);
-      --muted:#68736b;
-      --shadow:0 30px 80px rgba(11,29,22,.14);
-      --radius:28px;
-      --ease:cubic-bezier(.2,.7,.2,1);
+      --forest:#10271f;--forest2:#19372c;--ink:#122019;--paper:#f3efe4;--paper2:#e5ddcf;
+      --white:#fffdf7;--clay:#a95f39;--clay2:#d6a07d;--sage:#9aaa9e;--muted:#667269;
+      --line:rgba(18,32,25,.15);--line-dark:rgba(255,255,255,.15);--shadow:0 30px 90px rgba(11,29,22,.15);
+      --radius:28px;--ease:cubic-bezier(.2,.72,.2,1)
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;background:var(--forest)}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5;text-rendering:optimizeLegibility;overflow-x:hidden}
-    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.025;z-index:99;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.75'/%3E%3C/svg%3E")}
-    a{color:inherit;text-decoration:none}
-    button,a{touch-action:manipulation}
-    img{display:block;width:100%;height:auto}
-    ::selection{background:var(--clay);color:#fff}
-    :focus-visible{outline:3px solid var(--clay-soft);outline-offset:4px}
-    .skip{position:absolute;left:12px;top:-80px;z-index:200;background:#fff;color:#111;padding:10px 14px;border-radius:8px}.skip:focus{top:12px}
-    .wrap{width:min(1320px,calc(100% - 48px));margin:auto}
-    .display{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.045em}
-    .eyebrow{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
-    .eyebrow:before{content:"";width:28px;height:1px;background:currentColor;opacity:.55}
-    .muted{color:var(--muted)}
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
-    .reveal.is-visible{opacity:1;transform:none}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--forest)}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5;text-rendering:optimizeLegibility;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input{font:inherit}button{color:inherit}img{display:block;width:100%;height:auto}::selection{background:var(--clay);color:#fff}:focus-visible{outline:3px solid var(--clay2);outline-offset:4px}.skip{position:absolute;top:-80px;left:12px;z-index:200;background:#fff;color:#111;padding:10px 14px;border-radius:10px}.skip:focus{top:12px}.wrap{width:min(1320px,calc(100% - 48px));margin:auto}.display{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.045em}.eyebrow{display:flex;align-items:center;gap:10px;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.eyebrow:before{content:"";width:28px;height:1px;background:currentColor;opacity:.55}.muted{color:var(--muted)}.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.reveal.visible{opacity:1;transform:none}
 
-    /* NAV */
-    .nav{position:absolute;z-index:40;top:0;left:0;right:0;color:#fff}
-    .nav-inner{height:94px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line-light)}
-    .brand{display:flex;align-items:center;gap:13px;min-width:220px}
-    .brand-mark{width:46px;height:46px;border:1px solid rgba(255,255,255,.48);border-radius:50%;display:grid;place-items:center;position:relative;overflow:hidden}
-    .brand-mark:before,.brand-mark:after{content:"";position:absolute;width:56px;height:13px;border:1px solid rgba(255,255,255,.28);border-radius:50%;transform:rotate(-18deg)}
-    .brand-mark:after{width:70px;height:25px;transform:rotate(18deg)}
-    .brand-mark span{position:relative;z-index:2;font-family:Georgia,serif;font-size:18px;font-weight:700}
-    .brand-copy strong{display:block;font-size:15px;letter-spacing:.16em}.brand-copy small{display:block;margin-top:2px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;opacity:.58}
-    .nav-links{display:flex;gap:30px;align-items:center;font-size:12px;font-weight:700}
-    .nav-links>a:not(.nav-btn){opacity:.72;transition:.2s}.nav-links>a:not(.nav-btn):hover{opacity:1}
-    .nav-btn{border:1px solid rgba(255,255,255,.36);padding:11px 16px;border-radius:999px;background:rgba(255,255,255,.06);backdrop-filter:blur(12px)}
+    .nav{position:absolute;inset:0 0 auto;z-index:50;color:#fff}.nav-inner{height:92px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.15)}.brand{display:flex;align-items:center;gap:13px}.mark{width:46px;height:46px;border:1px solid rgba(255,255,255,.48);border-radius:50%;display:grid;place-items:center;font-family:Georgia,serif;font-weight:700;font-size:17px;position:relative;overflow:hidden}.mark:before,.mark:after{content:"";position:absolute;width:60px;height:13px;border:1px solid rgba(255,255,255,.2);border-radius:50%;transform:rotate(-18deg)}.mark:after{width:72px;height:26px;transform:rotate(18deg)}.mark span{position:relative;z-index:2}.brand strong{display:block;font-size:15px;letter-spacing:.18em}.brand small{display:block;margin-top:2px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;opacity:.58}.nav-links{display:flex;align-items:center;gap:28px;font-size:12px;font-weight:700}.nav-links>a:not(.nav-cta){opacity:.7}.nav-links>a:hover{opacity:1}.nav-cta{padding:11px 16px;border:1px solid rgba(255,255,255,.34);border-radius:999px;background:rgba(255,255,255,.06);backdrop-filter:blur(10px)}
 
-    /* HERO */
-    .hero{min-height:900px;background:var(--forest);color:#fff;position:relative;overflow:hidden;isolation:isolate}
-    .hero-grid{min-height:900px;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(390px,.88fr);align-items:end;gap:70px;padding-top:170px;padding-bottom:78px}
-    .hero-copy{position:relative;z-index:3;max-width:820px}
-    .hero .eyebrow{color:#d7c9ae}
-    .hero h1{font-size:clamp(58px,7.4vw,116px);line-height:.88;margin:20px 0 28px;max-width:1050px}
-    .hero h1 span{display:block;color:#d8b291;font-style:italic}
-    .hero-lead{font-size:clamp(17px,1.5vw,21px);line-height:1.65;color:rgba(255,255,255,.7);max-width:680px;margin:0 0 34px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 20px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.01em;transition:transform .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease)}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:var(--clay);color:#fff}.btn-primary:hover{background:#934f2e}
-    .btn-secondary{border:1px solid rgba(255,255,255,.3);color:#fff;background:rgba(255,255,255,.05)}.btn-secondary:hover{background:rgba(255,255,255,.1)}
-    .hero-note{display:flex;gap:10px;align-items:center;margin-top:24px;font-size:11px;color:rgba(255,255,255,.48)}
-    .hero-note i{width:7px;height:7px;background:#78a68f;border-radius:50%;box-shadow:0 0 0 5px rgba(120,166,143,.12)}
-    .concept-pill{position:absolute;top:122px;right:24px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);padding:8px 12px;border-radius:999px;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+    .hero{min-height:920px;background:var(--forest);color:#fff;position:relative;overflow:hidden;isolation:isolate}.hero:after{content:"";position:absolute;width:680px;height:680px;border-radius:50%;right:-280px;top:-260px;border:1px solid rgba(255,255,255,.05);box-shadow:0 0 0 90px rgba(255,255,255,.016),0 0 0 180px rgba(255,255,255,.01);z-index:-1}.hero-grid{min-height:920px;display:grid;grid-template-columns:minmax(0,1.04fr) minmax(420px,.96fr);gap:72px;align-items:end;padding:180px 0 76px}.hero-copy{padding-bottom:28px;position:relative;z-index:2}.hero .eyebrow{color:#d9cbb3}.hero h1{font-size:clamp(60px,7.5vw,116px);line-height:.88;margin:20px 0 28px;max-width:880px}.hero h1 em{display:block;color:#d7b08e;font-weight:400}.hero-lead{font-size:clamp(17px,1.45vw,21px);line-height:1.65;color:rgba(255,255,255,.7);max-width:670px;margin:0 0 34px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 20px;border-radius:999px;border:0;font-size:13px;font-weight:800;cursor:pointer;transition:transform .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease)}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--clay);color:#fff}.btn-primary:hover{background:#934e2f}.btn-secondary{color:#fff;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.05)}.btn-secondary:hover{background:rgba(255,255,255,.1)}.hero-proof{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:26px;font-size:11px;color:rgba(255,255,255,.52)}.hero-proof b{font-family:Georgia,serif;color:#ead8c5;font-size:17px;font-weight:400}.hero-proof i{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.32)}
 
-    .hero-visual{position:relative;height:610px;align-self:end;z-index:2}
-    .hero-plate{position:absolute;inset:0;border-radius:48% 48% 16px 16px / 30% 30% 16px 16px;border:1px solid rgba(255,255,255,.15);background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.015));overflow:hidden;box-shadow:0 50px 120px rgba(0,0,0,.25)}
-    .hero-photo{position:absolute;inset:56px 44px 44px;border-radius:280px 280px 18px 18px;overflow:hidden;background:linear-gradient(0deg,rgba(15,36,29,.35),rgba(15,36,29,.03)),url('https://images.unsplash.com/photo-1592822651536-ec8f8b31ea38?auto=format&fit=crop&q=84&w=1800') center/cover no-repeat;filter:saturate(.74) contrast(1.02)}
-    .topography{position:absolute;inset:-10%;opacity:.48;pointer-events:none}
-    .topography path{fill:none;stroke:rgba(228,215,188,.28);stroke-width:1}
-    .coordinate{position:absolute;bottom:66px;right:-8px;background:var(--paper);color:var(--ink);padding:18px 20px;border-radius:14px;box-shadow:var(--shadow);min-width:220px}
-    .coordinate b{font-family:Georgia,serif;font-size:24px;font-weight:400;display:block}.coordinate span{display:block;margin-top:5px;font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:#667069}
-    .hero-index{position:absolute;left:-28px;top:96px;writing-mode:vertical-rl;transform:rotate(180deg);font-size:9px;text-transform:uppercase;letter-spacing:.2em;color:rgba(255,255,255,.42)}
+    .hero-media{height:650px;position:relative}.photo-shell{position:absolute;inset:0;border-radius:48% 48% 20px 20px / 28% 28% 20px 20px;border:1px solid rgba(255,255,255,.14);overflow:hidden;background:#173228;box-shadow:0 60px 130px rgba(0,0,0,.28)}.photo-shell img{height:100%;object-fit:cover;object-position:center;filter:saturate(.72) contrast(1.04)}.photo-shell:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,39,31,.04),rgba(16,39,31,.45))}.media-note{position:absolute;left:-34px;bottom:42px;background:var(--paper);color:var(--ink);padding:19px 22px;border-radius:16px;box-shadow:var(--shadow);min-width:260px;z-index:3}.media-note small{display:block;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}.media-note strong{font-family:Georgia,serif;font-size:26px;font-weight:400}.media-coordinate{position:absolute;right:22px;top:28px;z-index:3;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.58);writing-mode:vertical-rl}
 
-    /* PROOF STRIP */
-    .proof-strip{background:#0c1f18;color:#fff}
-    .proof-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-    .proof-item{padding:35px 28px;border-right:1px solid rgba(255,255,255,.1);min-height:126px;display:flex;flex-direction:column;justify-content:space-between}.proof-item:first-child{padding-left:0}.proof-item:last-child{border-right:0}
-    .proof-item b{font-family:Georgia,serif;font-size:34px;font-weight:400;color:#ead6c1}.proof-item span{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:rgba(255,255,255,.47)}
+    .proofbar{background:#0c2018;color:#fff}.proof-grid{display:grid;grid-template-columns:repeat(4,1fr)}.proof{min-height:128px;padding:30px 26px;border-right:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;justify-content:space-between}.proof:first-child{padding-left:0}.proof:last-child{border-right:0}.proof b{font-family:Georgia,serif;font-size:34px;font-weight:400;color:#ecd8c5}.proof span{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.48)}
 
-    /* EDITORIAL INTRO */
-    .intro{padding:132px 0 120px}
-    .intro-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:110px;align-items:start}
-    .intro-title{position:sticky;top:70px}
-    .intro-title h2{font-size:clamp(48px,5.9vw,82px);line-height:.98;margin:18px 0 0}
-    .intro-copy{padding-top:54px}
-    .intro-copy>p{font-size:clamp(20px,2vw,28px);line-height:1.45;font-family:Georgia,serif;margin:0 0 56px;max-width:700px}
-    .responsibility{display:grid;grid-template-columns:74px 1fr;gap:22px;padding:26px 0;border-top:1px solid var(--line)}
-    .responsibility:last-child{border-bottom:1px solid var(--line)}
-    .responsibility .num{font-family:Georgia,serif;font-size:15px;color:var(--clay)}
-    .responsibility h3{font-size:17px;margin:0 0 8px}.responsibility p{margin:0;color:var(--muted);max-width:570px}
+    section{padding:126px 0}.section-head{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:end;margin-bottom:64px}.section-head h2{font-size:clamp(48px,5.8vw,82px);line-height:.96;margin:16px 0 0}.section-head p{margin:0 0 8px;font-size:17px;color:var(--muted);max-width:560px}
 
-    /* SIGNATURE ROUTE */
-    .route{background:var(--forest);color:#fff;padding:128px 0 130px;position:relative;overflow:hidden}
-    .route:before{content:"";position:absolute;width:700px;height:700px;border:1px solid rgba(255,255,255,.07);border-radius:50%;right:-310px;top:-210px;box-shadow:0 0 0 90px rgba(255,255,255,.018),0 0 0 180px rgba(255,255,255,.012)}
-    .route-head{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:end;margin-bottom:78px;position:relative;z-index:2}
-    .route-head h2{font-size:clamp(48px,5.7vw,82px);line-height:.96;margin:16px 0 0}.route-head p{margin:0 0 8px;color:rgba(255,255,255,.62);font-size:17px;max-width:550px}
-    .route-stage{display:grid;grid-template-columns:380px 1fr;gap:80px;align-items:start;position:relative;z-index:2}
-    .route-copy{position:sticky;top:80px;padding:12px 0 20px}
-    .route-kicker{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:#d7c9ae;margin-bottom:18px}
-    .route-copy h3{font-family:Georgia,serif;font-weight:400;font-size:39px;line-height:1.08;margin:0 0 18px}.route-copy p{color:rgba(255,255,255,.56);font-size:14px;max-width:320px}
-    .route-list{position:relative;padding-left:92px}
-    .route-line{position:absolute;left:30px;top:42px;bottom:42px;width:1px;background:rgba(255,255,255,.14);overflow:hidden}
-    .route-line span{display:block;width:100%;height:100%;background:linear-gradient(var(--clay-soft),var(--clay));transform-origin:top;transform:scaleY(0);transition:transform 1.7s var(--ease)}
-    .route.is-live .route-line span{transform:scaleY(1)}
-    .route-step{min-height:190px;border-top:1px solid rgba(255,255,255,.12);padding:31px 0 32px;position:relative;transition:opacity .35s var(--ease)}
-    .route-step:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
-    .route-dot{position:absolute;width:17px;height:17px;border-radius:50%;left:-70px;top:37px;background:var(--forest);border:1px solid rgba(255,255,255,.42);transition:.35s var(--ease)}
-    .route-step.active .route-dot{background:var(--clay);border-color:var(--clay);box-shadow:0 0 0 7px rgba(169,95,57,.18)}
-    .route-step small{font-size:9px;text-transform:uppercase;letter-spacing:.16em;color:rgba(255,255,255,.36)}
-    .route-step h4{font-family:Georgia,serif;font-size:34px;font-weight:400;margin:8px 0 10px}.route-step p{color:rgba(255,255,255,.57);margin:0;max-width:580px;font-size:14px}
+    .recognition{background:var(--paper)}.recognition-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:110px;align-items:start}.recognition-title{position:sticky;top:60px}.recognition-title h2{font-size:clamp(48px,5.8vw,82px);line-height:.98;margin:16px 0 0}.recognition-copy{padding-top:44px}.recognition-copy>p{font-family:Georgia,serif;font-size:clamp(21px,2vw,29px);line-height:1.45;margin:0 0 48px}.value-row{display:grid;grid-template-columns:72px 1fr;gap:22px;padding:28px 0;border-top:1px solid var(--line)}.value-row:last-child{border-bottom:1px solid var(--line)}.value-row .n{font-family:Georgia,serif;color:var(--clay)}.value-row h3{font-size:17px;margin:0 0 8px}.value-row p{margin:0;color:var(--muted);max-width:600px}
 
-    /* PROOF / HISTORY */
-    .history{padding:132px 0;background:var(--white)}
-    .history-head{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:end;margin-bottom:75px}
-    .history-head h2{font-size:clamp(50px,6vw,86px);line-height:.95;margin:16px 0 0}.history-head p{margin:0 0 8px;color:var(--muted);font-size:17px;max-width:530px}
-    .timeline{border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
-    .milestone{min-height:305px;padding:28px 30px 32px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between}.milestone:first-child{padding-left:0}.milestone:last-child{border-right:0}
-    .year{font-family:Georgia,serif;font-size:34px;color:var(--clay)}
-    .milestone h3{font-size:17px;margin:0 0 8px}.milestone p{font-size:13px;color:var(--muted);margin:0}
+    .route{background:var(--forest);color:#fff;position:relative;overflow:hidden}.route .section-head p{color:rgba(255,255,255,.58)}.route .eyebrow{color:#d8cbb4}.route-stage{display:grid;grid-template-columns:360px 1fr;gap:84px;align-items:start}.route-summary{position:sticky;top:72px;padding-top:12px}.route-summary small{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#d8cbb4}.route-summary h3{font-family:Georgia,serif;font-size:40px;font-weight:400;line-height:1.08;margin:13px 0 16px}.route-summary p{color:rgba(255,255,255,.56);font-size:14px;max-width:320px}.route-progress{height:4px;background:rgba(255,255,255,.12);border-radius:999px;overflow:hidden;margin-top:28px}.route-progress span{display:block;height:100%;width:20%;background:var(--clay2);transition:width .45s var(--ease)}.route-list{position:relative;padding-left:90px}.route-list:before{content:"";position:absolute;left:29px;top:40px;bottom:40px;width:1px;background:rgba(255,255,255,.14)}.route-step{position:relative;min-height:180px;padding:30px 0;border-top:1px solid rgba(255,255,255,.12);opacity:.46;transition:opacity .35s var(--ease),transform .35s var(--ease)}.route-step:last-child{border-bottom:1px solid rgba(255,255,255,.12)}.route-step.active{opacity:1;transform:translateX(5px)}.route-dot{position:absolute;left:-69px;top:35px;width:17px;height:17px;border-radius:50%;background:var(--forest);border:1px solid rgba(255,255,255,.4);transition:.35s}.route-step.active .route-dot{background:var(--clay);border-color:var(--clay);box-shadow:0 0 0 7px rgba(169,95,57,.18)}.route-step small{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.38)}.route-step h4{font-family:Georgia,serif;font-size:34px;font-weight:400;margin:7px 0 10px}.route-step p{margin:0;color:rgba(255,255,255,.58);font-size:14px;max-width:610px}
 
-    /* REAL AGRICULTURE */
-    .field{background:var(--paper-2);padding:0;overflow:hidden}
-    .field-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:760px}
-    .field-media{position:relative;min-height:760px;background:linear-gradient(0deg,rgba(16,39,31,.45),rgba(16,39,31,.02)),url('https://images.unsplash.com/photo-1749551923437-974cb4e2b0e2?auto=format&fit=crop&q=84&w=1800') center/cover no-repeat;filter:saturate(.72)}
-    .field-label{position:absolute;left:32px;bottom:30px;right:32px;display:flex;justify-content:space-between;gap:30px;color:#fff;font-size:10px;letter-spacing:.14em;text-transform:uppercase;border-top:1px solid rgba(255,255,255,.35);padding-top:16px}
-    .field-copy{padding:110px clamp(42px,7vw,110px);display:flex;flex-direction:column;justify-content:center}
-    .field-copy h2{font-size:clamp(48px,5.4vw,76px);line-height:.98;margin:17px 0 27px}.field-copy>p{font-size:17px;color:#5e6961;max-width:590px;margin:0 0 22px}
-    .field-proof{margin-top:22px;padding-top:24px;border-top:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:18px}.field-proof b{font-family:Georgia,serif;font-size:30px;font-weight:400;color:var(--clay)}.field-proof span{font-size:13px;color:#616b64;align-self:center}
+    .proof-section{background:var(--white)}.proof-layout{display:grid;grid-template-columns:.86fr 1.14fr;gap:90px}.proof-selector{display:flex;flex-direction:column;border-top:1px solid var(--line)}.proof-tab{appearance:none;border:0;border-bottom:1px solid var(--line);background:transparent;text-align:left;padding:22px 0;display:grid;grid-template-columns:78px 1fr auto;gap:18px;align-items:center;cursor:pointer;color:var(--muted)}.proof-tab strong{font-family:Georgia,serif;font-size:28px;font-weight:400;color:var(--clay)}.proof-tab span{font-weight:750;color:var(--ink)}.proof-tab i{font-style:normal;font-size:18px}.proof-tab[aria-selected="true"]{color:var(--ink)}.proof-panel{min-height:420px;background:var(--paper);border-radius:var(--radius);padding:48px;display:flex;flex-direction:column;justify-content:space-between}.proof-panel .big{font-family:Georgia,serif;font-size:clamp(58px,7vw,100px);font-weight:400;letter-spacing:-.05em;color:var(--forest);line-height:.9}.proof-panel h3{font-family:Georgia,serif;font-size:34px;font-weight:400;margin:26px 0 12px}.proof-panel p{color:var(--muted);max-width:650px;margin:0}.proof-source{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#7a817c}
 
-    /* TRANSPARENCY */
-    .stance{padding:130px 0 125px;background:var(--paper)}
-    .stance-card{background:var(--clay);color:#fff;border-radius:32px;padding:72px clamp(30px,6vw,78px);position:relative;overflow:hidden;box-shadow:var(--shadow)}
-    .stance-card:after{content:"HAMEL";position:absolute;right:-22px;bottom:-80px;font-family:Georgia,serif;font-size:clamp(130px,20vw,290px);line-height:1;color:rgba(255,255,255,.055);letter-spacing:-.08em}
-    .stance-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:85px;align-items:end;position:relative;z-index:1}
-    .stance h2{font-size:clamp(48px,5.8vw,82px);line-height:.96;margin:15px 0 0;max-width:850px}.stance p{font-size:17px;color:rgba(255,255,255,.75);margin:0;max-width:500px}
-    .stance strong{display:block;margin-top:24px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+    .transparency{background:var(--paper2);padding:0}.trans-grid{display:grid;grid-template-columns:1fr 1fr;min-height:720px}.trans-media{position:relative;overflow:hidden}.trans-media img{height:100%;object-fit:cover;filter:saturate(.7)}.trans-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,39,31,.35),transparent 55%)}.trans-copy{padding:100px clamp(38px,7vw,108px);display:flex;flex-direction:column;justify-content:center}.trans-copy h2{font-size:clamp(48px,5.5vw,76px);line-height:.98;margin:16px 0 26px}.trans-copy>p{font-size:17px;color:var(--muted);max-width:610px;margin:0 0 32px}.principle{padding:20px 0;border-top:1px solid var(--line)}.principle:last-child{border-bottom:1px solid var(--line)}.principle b{display:block;font-size:14px;margin-bottom:4px}.principle span{font-size:13px;color:var(--muted)}
 
-    /* CONTACT */
-    .contact{background:#0c1f18;color:#fff;padding:128px 0 50px}
-    .contact-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:80px;align-items:end}
-    .contact h2{font-size:clamp(58px,7.2vw,106px);line-height:.87;margin:20px 0 28px}.contact h2 span{color:#d8b291;font-style:italic;display:block}
-    .contact p{color:rgba(255,255,255,.6);font-size:16px;max-width:590px}
-    .contact-card{border-top:1px solid rgba(255,255,255,.25)}
-    .contact-row{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.12)}.contact-row span{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.38)}.contact-row a,.contact-row b{font-size:13px;text-align:right}
-    .contact-actions{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
-    footer{margin-top:105px;padding:28px 0 0;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.36)}
+    .check{background:var(--forest);color:#fff}.check .section-head p{color:rgba(255,255,255,.58)}.check .eyebrow{color:#d8cbb4}.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.check-card{border:1px solid rgba(255,255,255,.14);border-radius:28px;padding:36px;background:rgba(255,255,255,.035)}.question{padding:0 0 28px;margin-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}.question:last-of-type{margin-bottom:0}.question h3{font-size:14px;margin:0 0 14px}.choices{display:flex;flex-wrap:wrap;gap:9px}.choice{appearance:none;border:1px solid rgba(255,255,255,.2);background:transparent;color:rgba(255,255,255,.7);padding:10px 13px;border-radius:999px;font-size:12px;cursor:pointer;transition:.2s}.choice:hover,.choice[aria-pressed="true"]{background:#fff;color:var(--forest);border-color:#fff}.result{border-radius:28px;background:var(--paper);color:var(--ink);padding:42px;display:flex;flex-direction:column;justify-content:space-between;min-height:410px}.result small{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}.result h3{font-family:Georgia,serif;font-size:clamp(34px,4vw,54px);font-weight:400;line-height:1.02;margin:16px 0 18px}.result p{color:var(--muted);margin:0;max-width:520px}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}.result .btn-secondary{color:var(--ink);border-color:var(--line);background:transparent}.demo-note{margin-top:14px;font-size:10px;color:rgba(255,255,255,.4)}
 
-    @media(max-width:1000px){
-      .wrap{width:min(100% - 34px,820px)}
-      .nav-inner{height:78px}.nav-links>a:not(.nav-btn){display:none}.brand-copy small{display:none}
-      .hero,.hero-grid{min-height:auto}.hero-grid{grid-template-columns:1fr;padding-top:145px;padding-bottom:60px}.hero-visual{height:520px;margin-top:10px}.hero-index{display:none}.concept-pill{top:94px;right:17px}
-      .proof-grid{grid-template-columns:1fr 1fr}.proof-item:nth-child(2){border-right:0}.proof-item:nth-child(3),.proof-item:nth-child(4){border-top:1px solid rgba(255,255,255,.1)}
-      .intro-grid,.route-head,.history-head,.stance-grid,.contact-grid{grid-template-columns:1fr;gap:46px}.intro-title{position:static}.intro-copy{padding-top:0}
-      .route-stage{grid-template-columns:1fr;gap:35px}.route-copy{position:static}.route-list{padding-left:66px}.route-dot{left:-44px}.route-line{left:30px}
-      .timeline{grid-template-columns:1fr 1fr}.milestone:nth-child(2){border-right:0}.milestone:nth-child(3),.milestone:nth-child(4){border-top:1px solid var(--line)}
-      .field-grid{grid-template-columns:1fr}.field-media{min-height:560px}.field-copy{padding:80px 32px}
-    }
-    @media(max-width:640px){
-      .wrap{width:calc(100% - 28px)}
-      .brand{min-width:0}.brand-mark{width:40px;height:40px}.brand-copy strong{font-size:13px}.nav-btn{padding:9px 12px;font-size:10px}
-      .hero-grid{padding-top:132px}.hero h1{font-size:clamp(51px,16vw,72px)}.hero-lead{font-size:16px}.hero-actions{display:grid}.btn{width:100%}
-      .hero-visual{height:420px}.hero-photo{inset:42px 20px 24px}.coordinate{right:8px;bottom:38px;min-width:195px}.concept-pill{font-size:8px}
-      .proof-grid{grid-template-columns:1fr 1fr}.proof-item{padding:24px 14px;min-height:112px}.proof-item:first-child{padding-left:14px}.proof-item b{font-size:28px}.proof-item span{font-size:8px}
-      .intro,.history,.stance{padding:90px 0}.route{padding:92px 0}.intro-grid{gap:36px}.intro-title h2,.history-head h2,.route-head h2,.field-copy h2,.stance h2{font-size:44px}.intro-copy>p{font-size:22px;margin-bottom:36px}.responsibility{grid-template-columns:42px 1fr;gap:12px}
-      .route-head{margin-bottom:52px}.route-stage{gap:18px}.route-copy h3{font-size:32px}.route-list{padding-left:54px}.route-line{left:20px}.route-dot{left:-42px}.route-step{min-height:170px}.route-step h4{font-size:29px}
-      .timeline{grid-template-columns:1fr}.milestone{min-height:210px;border-right:0!important;border-top:1px solid var(--line);padding:24px 0!important}.milestone:first-child{border-top:0}.field-media{min-height:470px}.field-label{left:18px;right:18px}
-      .stance-card{border-radius:22px;padding:48px 24px}.contact{padding-top:90px}.contact h2{font-size:60px}.contact-row{display:block}.contact-row a,.contact-row b{display:block;text-align:left;margin-top:8px}.contact-actions{display:grid}.contact-actions .btn{width:100%}footer{margin-top:72px}
-    }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.route-line span{transform:scaleY(1)!important;transition:none}.btn{transition:none}}
+    .contact{background:var(--clay);color:#fff;padding:108px 0}.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:end}.contact h2{font-size:clamp(52px,6vw,88px);line-height:.92;margin:15px 0 0}.contact-card{border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.1);border-radius:24px;padding:28px}.contact-row{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.16)}.contact-row:last-child{border-bottom:0}.contact-row span{font-size:9px;letter-spacing:.14em;text-transform:uppercase;opacity:.68}.contact-row b{font-size:14px;text-align:right}
+
+    footer{background:#0b1712;color:rgba(255,255,255,.55);padding:44px 0 30px}.footer-grid{display:flex;align-items:flex-end;justify-content:space-between;gap:40px}.footer-brand strong{display:block;color:#fff;letter-spacing:.18em}.footer-brand small{display:block;margin-top:6px;font-size:10px}.footer-meta{text-align:right;font-size:11px}.footer-meta a{display:inline-block;margin-left:16px}.legal-note{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:9px;letter-spacing:.04em;color:rgba(255,255,255,.34)}
+
+    .mobile-cta{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:80;background:rgba(16,39,31,.92);color:#fff;backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.16);padding:10px;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.24)}.mobile-cta a{display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:12px;background:var(--clay);font-size:13px;font-weight:800}
+
+    @media(max-width:980px){.nav-inner{height:78px}.nav-links>a:not(.nav-cta){display:none}.hero{min-height:auto}.hero-grid{grid-template-columns:1fr;min-height:auto;padding:145px 0 64px}.hero-copy{padding-bottom:0}.hero h1{font-size:clamp(58px,11vw,86px)}.hero-media{height:560px;margin-top:10px}.media-note{left:18px}.proof-grid{grid-template-columns:1fr 1fr}.proof:nth-child(2){border-right:0}.proof:nth-child(3),.proof:nth-child(4){border-top:1px solid rgba(255,255,255,.1)}.recognition-grid,.section-head,.route-stage,.proof-layout,.check-grid,.contact-grid{grid-template-columns:1fr;gap:48px}.recognition-title,.route-summary{position:relative;top:auto}.recognition-copy{padding-top:0}.route-list{padding-left:76px}.proof-panel{min-height:360px}.trans-grid{grid-template-columns:1fr}.trans-media{height:520px}.trans-copy{padding:76px 34px}.contact-grid{align-items:start}}
+    @media(max-width:640px){.wrap{width:min(100% - 30px,1320px)}.brand small{display:none}.nav-cta{padding:9px 12px}.hero-grid{padding-top:126px}.hero h1{font-size:55px}.hero-lead{font-size:16px}.hero-media{height:430px}.photo-shell{border-radius:44% 44% 18px 18px / 25% 25% 18px 18px}.media-note{left:12px;bottom:16px;min-width:220px;padding:15px 17px}.media-note strong{font-size:21px}.media-coordinate{display:none}.proof{padding:24px 16px;min-height:108px}.proof:first-child{padding-left:16px}.proof b{font-size:27px}section{padding:88px 0}.recognition-grid,.section-head,.proof-layout,.check-grid{gap:36px}.recognition-title h2,.section-head h2{font-size:48px}.value-row{grid-template-columns:48px 1fr}.route-list{padding-left:54px}.route-list:before{left:18px}.route-dot{left:-44px}.route-step h4{font-size:29px}.proof-tab{grid-template-columns:58px 1fr auto}.proof-tab strong{font-size:24px}.proof-panel{padding:30px;min-height:340px}.trans-media{height:390px}.trans-copy{padding:70px 22px}.check-card,.result{padding:26px}.contact{padding:80px 0 104px}.contact h2{font-size:52px}.contact-row{display:block}.contact-row b{display:block;text-align:left;margin-top:5px}.footer-grid{display:block}.footer-meta{text-align:left;margin-top:20px}.footer-meta a{margin:0 14px 0 0}.mobile-cta{display:block}body{padding-bottom:78px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.route-step,.route-progress span,.btn{transition:none}}
   </style>
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
-<header class="nav">
+<header class="nav" aria-label="Hauptnavigation">
   <div class="wrap nav-inner">
     <a class="brand" href="#top" aria-label="HAMEL Startseite">
-      <span class="brand-mark" aria-hidden="true"><span>H</span></span>
-      <span class="brand-copy"><strong>HAMEL</strong><small>Landwirtschaft · Vermarktung · Logistik</small></span>
+      <span class="mark" aria-hidden="true"><span>H</span></span>
+      <span><strong>HAMEL</strong><small>Landwirtschaft · Vermarktung · Logistik</small></span>
     </a>
-    <nav class="nav-links" aria-label="Hauptnavigation">
-      <a href="#system">Unser System</a><a href="#geschichte">Geschichte</a><a href="#landwirtschaft">Landwirtschaft</a>
-      <a class="nav-btn" href="tel:+496636363">Direkt anrufen ↗</a>
+    <nav class="nav-links" aria-label="Seitennavigation">
+      <a href="#prozess">Arbeitsweise</a><a href="#belege">Unternehmen</a><a href="#haltung">Haltung</a><a class="nav-cta" href="#check" data-track="nav_check">Vermarktung anfragen</a>
     </nav>
   </div>
 </header>
 <main id="main">
   <section class="hero" id="top">
-    <div class="concept-pill">Marken- & Websitekonzept · 2026</div>
     <div class="wrap hero-grid">
       <div class="hero-copy reveal">
         <div class="eyebrow">Romrod-Zell · seit über 200 Jahren</div>
-        <h1 class="display">Landwirtschaft braucht Partner, <span>die liefern.</span></h1>
-        <p class="hero-lead">HAMEL verbindet landwirtschaftliche Betriebe mit verlässlicher Tiervermarktung und Logistik – persönlich koordiniert, überregional vernetzt und heute in siebter Generation geführt.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="tel:+496636363">Mit HAMEL sprechen <span aria-hidden="true">↗</span></a>
-          <a class="btn btn-secondary" href="#system">So arbeiten wir <span aria-hidden="true">↓</span></a>
+        <h1 class="display">Landwirtschaft braucht <em>verlässliche Wege.</em></h1>
+        <p class="hero-lead">HAMEL verbindet landwirtschaftliche Betriebe mit Tiervermarktung und Logistik – persönlich koordiniert, über Generationen gewachsen und mit kurzen Entscheidungswegen.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#check" data-track="hero_check">Vermarktung besprechen →</a>
+          <a class="btn btn-secondary" href="#prozess" data-track="hero_process">So arbeitet HAMEL</a>
         </div>
-        <div class="hero-note"><i aria-hidden="true"></i><span>Volker Hamel GmbH · Billertshäuser Str. 1 · 36329 Romrod-Zell</span></div>
+        <div class="hero-proof" aria-label="Unternehmenskennzahlen"><b>7. Generation</b><i></i><span>≈ 500.000 Schweine / Jahr*</span><i></i><span>Romrod-Zell</span></div>
       </div>
-      <div class="hero-visual reveal" aria-label="Landwirtschaftliche Bildwelt">
-        <div class="hero-index">07. Generation · Oberhessen · Deutschlandweit</div>
-        <div class="hero-plate">
-          <svg class="topography" viewBox="0 0 800 800" aria-hidden="true">
-            <path d="M28 290C138 184 250 223 337 171s161-70 252-24 126 142 185 162"/>
-            <path d="M-10 342c120-95 225-73 321-128s191-92 290-47 121 147 194 175"/>
-            <path d="M-12 408c122-88 223-59 321-113s194-105 302-61 118 157 207 184"/>
-            <path d="M-18 484c118-82 215-49 318-101s198-111 312-69 125 164 216 197"/>
-            <path d="M-8 565c121-74 220-42 321-90s197-105 315-63 127 156 213 190"/>
-          </svg>
-          <div class="hero-photo"></div>
-        </div>
-        <div class="coordinate"><b>50.698° N</b><span>Romrod-Zell · Oberhessen</span></div>
+      <div class="hero-media reveal" aria-label="Landwirtschaftliches Motiv">
+        <div class="photo-shell"><img src="https://images.unsplash.com/photo-1592822651536-ec8f8b31ea38?auto=format&fit=crop&q=82&w=1800" alt="Rinder auf einer Weide" width="1200" height="1600" fetchpriority="high"></div>
+        <div class="media-note"><small>Marke statt Branchenklischee</small><strong>HAMEL</strong></div>
+        <div class="media-coordinate">50.72° N · 9.22° E</div>
       </div>
     </div>
   </section>
 
-  <section class="proof-strip" aria-label="Unternehmenskennzahlen">
+  <section class="proofbar" aria-label="Unternehmensbelege">
     <div class="wrap proof-grid">
-      <div class="proof-item"><b>200+ Jahre</b><span>Unternehmensgeschichte</span></div>
-      <div class="proof-item"><b>7. Generation</b><span>Familienunternehmen</span></div>
-      <div class="proof-item"><b>≈ 500.000</b><span>Schweine jährlich vermarktet*</span></div>
-      <div class="proof-item"><b>DE +</b><span>Deutschland und darüber hinaus*</span></div>
+      <div class="proof"><b>200+</b><span>Jahre Unternehmensgeschichte</span></div>
+      <div class="proof"><b>7.</b><span>Generation in Familiengeschichte</span></div>
+      <div class="proof"><b>≈500k</b><span>Schweine jährlich vermarktet*</span></div>
+      <div class="proof"><b>2023</b><span>Johannes Hamel alleiniger Geschäftsführer</span></div>
     </div>
   </section>
 
-  <section class="intro" id="leistung">
-    <div class="wrap intro-grid">
-      <div class="intro-title reveal">
-        <div class="eyebrow" style="color:var(--clay)">Worauf es ankommt</div>
-        <h2 class="display">Wenn der Markt sich bewegt, zählt Verlässlichkeit.</h2>
+  <section class="recognition" aria-labelledby="recognition-title">
+    <div class="wrap recognition-grid">
+      <div class="recognition-title reveal">
+        <div class="eyebrow">Worum es wirklich geht</div>
+        <h2 id="recognition-title" class="display">Wenn Timing zählt, darf nichts zwischen den Stühlen landen.</h2>
       </div>
-      <div class="intro-copy reveal">
-        <p>Tiervermarktung ist kein anonymer Warenfluss. Zwischen Betrieb, Vermarktung, Disposition und Transport müssen Entscheidungen zur richtigen Zeit ineinandergreifen.</p>
-        <div class="responsibility"><span class="num">01</span><div><h3>Direkte Abstimmung</h3><p>Klare Ansprechpartner statt unnötiger Schleifen. Situation erfassen, Bedarf verstehen, nächsten Schritt koordinieren.</p></div></div>
-        <div class="responsibility"><span class="num">02</span><div><h3>Vermarktung mit Reichweite</h3><p>Ein über Jahrzehnte gewachsenes Netzwerk verbindet landwirtschaftliche Betriebe mit verlässlichen Abnehmerstrukturen.</p></div></div>
-        <div class="responsibility"><span class="num">03</span><div><h3>Logistik als Teil des Systems</h3><p>Transport wird nicht nachträglich gedacht, sondern als fester Bestandteil einer sauberen Vermarktung koordiniert.</p></div></div>
+      <div class="recognition-copy reveal">
+        <p>Tiervermarktung ist kein einzelner Transport. Sie ist eine Kette aus Abstimmung, Verfügbarkeit, Disposition und verlässlicher Kommunikation.</p>
+        <div class="value-row"><div class="n">01</div><div><h3>Klare Ansprechpartner</h3><p>Kurze Wege statt anonymer Plattformlogik. Entscheidend ist, dass Betriebe wissen, wer sich kümmert und was als Nächstes passiert.</p></div></div>
+        <div class="value-row"><div class="n">02</div><div><h3>Vermarktung mit Überblick</h3><p>Tierart, Menge, Zeitraum und Ziel müssen zusammen gedacht werden. Genau diese Koordination macht den Unterschied.</p></div></div>
+        <div class="value-row"><div class="n">03</div><div><h3>Logistik als Teil der Leistung</h3><p>Transport ist kein Nachtrag, sondern Bestandteil eines funktionierenden Ablaufs – planbar, abgestimmt und nachvollziehbar.</p></div></div>
       </div>
     </div>
   </section>
 
-  <section class="route" id="system">
+  <section class="route" id="prozess" aria-labelledby="route-title">
     <div class="wrap">
-      <div class="route-head reveal">
-        <div><div class="eyebrow" style="color:#d7c9ae">Das HAMEL System</div><h2 class="display">Ein Weg. Fünf Schritte. Ein Ansprechpartner.</h2></div>
-        <p>Der Unterschied liegt nicht in einem einzelnen Schritt, sondern darin, dass Vermarktung und Logistik als zusammenhängender Prozess geführt werden.</p>
+      <div class="section-head reveal">
+        <div><div class="eyebrow">Signature Experience</div><h2 id="route-title" class="display">Vom Betrieb bis zur Vermarktung: ein durchgängiger Weg.</h2></div>
+        <p>Die Demo zeigt nicht nur Leistungen, sondern den Mechanismus dahinter. Beim Scrollen folgt die Seite dem realen Entscheidungsweg einer Anfrage.</p>
       </div>
       <div class="route-stage">
-        <div class="route-copy reveal"><div class="route-kicker">Signature Interaction</div><h3>Vom Betrieb bis zur Vermarktung.</h3><p>Beim Scrollen folgt die Seite exakt dem Weg, den HAMEL täglich koordiniert. Keine Dekoration – das Geschäftsmodell selbst wird zur Navigation.</p></div>
-        <div class="route-list">
-          <div class="route-line" aria-hidden="true"><span></span></div>
-          <article class="route-step active"><span class="route-dot" aria-hidden="true"></span><small>01 · Ausgangspunkt</small><h4>Betrieb</h4><p>Die konkrete Situation vor Ort ist der Ausgangspunkt: Tierart, Umfang, Timing und Ziel werden sauber eingeordnet.</p></article>
-          <article class="route-step"><span class="route-dot" aria-hidden="true"></span><small>02 · Abstimmung</small><h4>Erfassung</h4><p>HAMEL bündelt die relevanten Informationen und schafft Klarheit für die nächsten Schritte.</p></article>
-          <article class="route-step"><span class="route-dot" aria-hidden="true"></span><small>03 · Koordination</small><h4>Disposition</h4><p>Abnehmer, Zeitfenster und Transport werden zu einem belastbaren Ablauf zusammengeführt.</p></article>
-          <article class="route-step"><span class="route-dot" aria-hidden="true"></span><small>04 · Bewegung</small><h4>Transport</h4><p>Der physische Weg ist Teil des Systems – geplant, abgestimmt und mit möglichst wenig Reibung für alle Beteiligten.</p></article>
-          <article class="route-step"><span class="route-dot" aria-hidden="true"></span><small>05 · Ziel</small><h4>Vermarktung</h4><p>Am Ende steht nicht nur Bewegung, sondern eine funktionierende Verbindung zwischen landwirtschaftlichem Betrieb und Markt.</p></article>
+        <div class="route-summary reveal"><small>Aktueller Schritt</small><h3 id="routeSummary">Betrieb & Bedarf</h3><p id="routeText">Ausgangspunkt sind Tierart, Umfang, Zeitpunkt und die konkrete Situation des landwirtschaftlichen Betriebs.</p><div class="route-progress" aria-hidden="true"><span id="routeProgress"></span></div></div>
+        <div class="route-list" id="routeList">
+          <article class="route-step active" data-title="Betrieb & Bedarf" data-copy="Ausgangspunkt sind Tierart, Umfang, Zeitpunkt und die konkrete Situation des landwirtschaftlichen Betriebs."><span class="route-dot" aria-hidden="true"></span><small>01 · Erfassen</small><h4>Situation verstehen</h4><p>Was steht an, in welchem Zeitraum und welche Rahmenbedingungen müssen berücksichtigt werden?</p></article>
+          <article class="route-step" data-title="Abstimmung" data-copy="Anforderungen werden konkretisiert, damit Vermarktung und Logistik nicht nebeneinander, sondern miteinander geplant werden."><span class="route-dot" aria-hidden="true"></span><small>02 · Abstimmen</small><h4>Rahmen klären</h4><p>Mengen, Zeitfenster und Ziel werden abgestimmt – bevor operative Reibung entsteht.</p></article>
+          <article class="route-step" data-title="Disposition" data-copy="Die Koordination verbindet verfügbare Kapazitäten, Transport und Vermarktungsweg zu einem belastbaren Ablauf."><span class="route-dot" aria-hidden="true"></span><small>03 · Disponieren</small><h4>Wege organisieren</h4><p>Kapazitäten und Transport werden passend zur Vermarktung geplant.</p></article>
+          <article class="route-step" data-title="Transport" data-copy="Der Transport ist Teil der Kette und wird nicht erst am Ende ergänzt. Dadurch bleiben Zuständigkeiten und Zeitfenster klar."><span class="route-dot" aria-hidden="true"></span><small>04 · Bewegen</small><h4>Transport koordinieren</h4><p>Klare Übergaben und abgestimmte Zeitfenster halten den Prozess nachvollziehbar.</p></article>
+          <article class="route-step" data-title="Vermarktung" data-copy="Am Ende steht nicht ein Website-Klick, sondern eine sauber organisierte Vermarktung mit einem Ansprechpartner für den Betrieb."><span class="route-dot" aria-hidden="true"></span><small>05 · Vermarkten</small><h4>Verlässlich abschließen</h4><p>Die Kette endet dort, wo für den Betrieb Klarheit über den nächsten Schritt besteht.</p></article>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="history" id="geschichte">
+  <section class="proof-section" id="belege" aria-labelledby="proof-title">
     <div class="wrap">
-      <div class="history-head reveal"><div><div class="eyebrow" style="color:var(--clay)">Gewachsen, nicht erfunden</div><h2 class="display">Mehr als zwei Jahrhunderte unternehmerische Landwirtschaft.</h2></div><p>HAMEL wurde vor über 200 Jahren am heutigen Standort gegründet. Aus dem ursprünglichen Schafhandel entwickelte sich ein überregional tätiges Unternehmen – heute unter der Leitung von Johannes Hamel.</p></div>
-      <div class="timeline reveal">
-        <article class="milestone"><div class="year">vor 200+ J.</div><div><h3>Der Anfang</h3><p>Ein Vorfahr namens Johannes gründet das Unternehmen am heutigen Standort; zunächst liegt der Schwerpunkt auf dem Schafhandel.</p></div></article>
-        <article class="milestone"><div class="year">1979</div><div><h3>Volker Hamel übernimmt</h3><p>Aus einem regional aufgestellten Betrieb wächst in den folgenden Jahrzehnten ein Partner für Tierhaltung in ganz Deutschland und darüber hinaus.</p></div></article>
-        <article class="milestone"><div class="year">2007</div><div><h3>Nächste Generation</h3><p>Johannes Hamel übernimmt bereits früh leitende Verantwortung im Unternehmen.</p></div></article>
-        <article class="milestone"><div class="year">2023</div><div><h3>7. Generation</h3><p>Johannes Hamel wird alleiniger Geschäftsführer; SIMON-Fleisch Holding kommt als weiterer Gesellschafter hinzu.</p></div></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="field" id="landwirtschaft">
-    <div class="field-grid">
-      <div class="field-media" role="img" aria-label="Rinder in landwirtschaftlicher Umgebung"><div class="field-label"><span>Eigene Landwirtschaft</span><span>Romrod-Zell</span></div></div>
-      <div class="field-copy reveal">
-        <div class="eyebrow" style="color:var(--clay)">Praxis statt Distanz</div>
-        <h2 class="display">Landwirtschaft kennen, weil man sie selbst lebt.</h2>
-        <p>Die Familie Hamel kennt Tierhaltung nicht nur aus der Vermarktung. Der landwirtschaftliche Betrieb in Romrod-Zell arbeitete unter anderem mit einer Charolais-Mutterkuhherde und setzte früh auf neue Stallkonzepte.</p>
-        <p>Bereits 2017 wurde dort ein in Deutschland zu diesem Zeitpunkt einmaliges Twin-Roundhouse vorgestellt. Im Mittelpunkt standen Frischluft, gute Separations- und Behandlungsmöglichkeiten sowie eine effiziente Führung des Stalls.</p>
-        <div class="field-proof"><b>250</b><span>Tierplätze waren für die beiden Rundställe bei der Vorstellung des Twin-Roundhouse vorgesehen.</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="stance">
-    <div class="wrap">
-      <div class="stance-card reveal">
-        <div class="stance-grid">
-          <div><div class="eyebrow">Neue Markenhaltung</div><h2 class="display">Verantwortung beginnt damit, die Dinge klar zu benennen.</h2></div>
-          <div><p>HAMEL versteckt nicht, worum es geht: Landwirtschaft, Tiere, Vermarktung und Transport. Eine moderne Marke braucht dafür keine weichgespülten Begriffe, sondern Transparenz, nachvollziehbare Prozesse und Respekt gegenüber Betrieben, Tieren und Partnern.</p><strong>HAMEL · Landwirtschaft · Tiervermarktung · Logistik</strong></div>
+      <div class="section-head reveal"><div><div class="eyebrow">Belege statt Behauptungen</div><h2 id="proof-title" class="display">Tradition ist nur dann wertvoll, wenn sie heute noch etwas beweist.</h2></div><p>Die wichtigsten Aussagen werden nicht als dekorative Zahlen versteckt, sondern mit Kontext gezeigt. In der finalen Seite würden hier zusätzlich Originalfotos, Partnerbelege und freigegebene Kundenstimmen ergänzt.</p></div>
+      <div class="proof-layout reveal">
+        <div class="proof-selector" role="tablist" aria-label="Unternehmensbelege">
+          <button class="proof-tab" role="tab" aria-selected="true" data-key="history"><strong>200+</strong><span>Jahre Geschichte</span><i>→</i></button>
+          <button class="proof-tab" role="tab" aria-selected="false" data-key="generation"><strong>7.</strong><span>Generation</span><i>→</i></button>
+          <button class="proof-tab" role="tab" aria-selected="false" data-key="volume"><strong>≈500k</strong><span>Schweine / Jahr*</span><i>→</i></button>
+          <button class="proof-tab" role="tab" aria-selected="false" data-key="leadership"><strong>2023</strong><span>Generationswechsel</span><i>→</i></button>
         </div>
+        <div class="proof-panel" role="tabpanel" aria-live="polite"><div><div class="big" id="proofBig">200+</div><h3 id="proofHeading">Über zwei Jahrhunderte am selben Standort verwurzelt.</h3><p id="proofCopy">Die Unternehmensgeschichte reicht laut Unternehmensdarstellung mehr als 200 Jahre zurück. Aus dem ursprünglichen Schafhandel entwickelte sich über Generationen ein überregional tätiges Vermarktungsunternehmen.</p></div><div class="proof-source" id="proofSource">Quelle: Unternehmensmitteilung SIMON-Fleisch / HAMEL</div></div>
       </div>
     </div>
   </section>
 
-  <section class="contact" id="kontakt">
-    <div class="wrap">
-      <div class="contact-grid reveal">
-        <div><div class="eyebrow" style="color:#d7c9ae">Direkter Draht</div><h2 class="display">Sprechen Sie mit <span>HAMEL.</span></h2><p>Kurze Wege beginnen mit einem direkten Ansprechpartner. Rufen Sie an oder schreiben Sie eine E-Mail – dann klären wir die nächsten Schritte persönlich.</p></div>
-        <div class="contact-card">
-          <div class="contact-row"><span>Telefon</span><a href="tel:+496636363">+49 (0) 6636 363</a></div>
-          <div class="contact-row"><span>E-Mail</span><a href="mailto:info@viehhandlung-hamel.de">info@viehhandlung-hamel.de</a></div>
-          <div class="contact-row"><span>Standort</span><b>Billertshäuser Str. 1<br>36329 Romrod-Zell</b></div>
-          <div class="contact-actions"><a class="btn btn-primary" href="tel:+496636363">Jetzt anrufen ↗</a><a class="btn btn-secondary" href="mailto:info@viehhandlung-hamel.de">E-Mail schreiben</a></div>
-        </div>
-      </div>
-      <footer><span>© 2026 Volker Hamel GmbH · Marken-/Websitekonzept</span><span>* Historische Unternehmensangaben aus Pressemitteilung zum Generationswechsel 2023.</span><span>Konzept: JJ Media</span></footer>
+  <section class="transparency" id="haltung" aria-labelledby="trans-title">
+    <div class="trans-grid">
+      <div class="trans-media"><img src="https://images.unsplash.com/photo-1749551923437-974cb4e2b0e2?auto=format&fit=crop&q=80&w=1800" alt="Rind in landwirtschaftlicher Umgebung" width="1600" height="1200" loading="lazy"></div>
+      <div class="trans-copy reveal"><div class="eyebrow">Haltung zur Kommunikation</div><h2 id="trans-title" class="display">Tiervermarktung heißt Verantwortung. Wir nennen sie beim Namen.</h2><p>Das Rebranding versteckt das Geschäft nicht. Es schafft einen ruhigeren, moderneren Rahmen, in dem Prozesse, Menschen und Verantwortung nachvollziehbar erklärt werden können.</p><div class="principle"><b>Keine Euphemismen</b><span>HAMEL erklärt, was das Unternehmen tut – sachlich und ohne künstliche Härte.</span></div><div class="principle"><b>Reale Arbeit statt Stock-Story</b><span>Im finalen Auftritt gehören Johannes Hamel, Fuhrpark, Betrieb und Tiere in den Mittelpunkt.</span></div><div class="principle"><b>Transparenz statt Verteidigung</b><span>Fragen werden beantwortet, bevor aus fehlendem Kontext Misstrauen entsteht.</span></div></div>
     </div>
   </section>
+
+  <section class="check" id="check" aria-labelledby="check-title">
+    <div class="wrap">
+      <div class="section-head reveal"><div><div class="eyebrow">Conversion-Demo</div><h2 id="check-title" class="display">In 20 Sekunden zur passenden Kontaktart.</h2></div><p>Keine riesige Formularwand: wenige Angaben bestimmen den sinnvollsten nächsten Schritt. Im verkauften System würde die Anfrage automatisch an den richtigen Ansprechpartner geroutet.</p></div>
+      <div class="check-grid reveal">
+        <div class="check-card">
+          <div class="question"><h3>1. Worum geht es?</h3><div class="choices" role="group" aria-label="Tierart"><button class="choice" aria-pressed="false" data-group="animal" data-value="Schweine">Schweine</button><button class="choice" aria-pressed="false" data-group="animal" data-value="Rinder">Rinder</button><button class="choice" aria-pressed="false" data-group="animal" data-value="Andere Anfrage">Andere Anfrage</button></div></div>
+          <div class="question"><h3>2. Welcher Umfang passt am ehesten?</h3><div class="choices" role="group" aria-label="Umfang"><button class="choice" aria-pressed="false" data-group="size" data-value="Einzel / kleiner Umfang">Einzel / kleiner Umfang</button><button class="choice" aria-pressed="false" data-group="size" data-value="Regelmäßig">Regelmäßig</button><button class="choice" aria-pressed="false" data-group="size" data-value="Größerer Umfang">Größerer Umfang</button></div></div>
+          <div class="question"><h3>3. Wann soll es losgehen?</h3><div class="choices" role="group" aria-label="Zeitraum"><button class="choice" aria-pressed="false" data-group="time" data-value="Kurzfristig">Kurzfristig</button><button class="choice" aria-pressed="false" data-group="time" data-value="Planbar">Planbar</button><button class="choice" aria-pressed="false" data-group="time" data-value="Erst informieren">Erst informieren</button></div></div>
+          <div class="demo-note">Demo-Funktion: noch ohne CRM, Speicherung oder automatische Weiterleitung.</div>
+        </div>
+        <div class="result" aria-live="polite"><div><small>Empfohlener nächster Schritt</small><h3 id="resultTitle">Direkt und unkompliziert abstimmen.</h3><p id="resultCopy">Wählen Sie links drei Punkte aus. Die Demo passt den nächsten Schritt anschließend an Ihre Situation an.</p></div><div class="result-actions"><a class="btn btn-primary" href="tel:+496636363" data-track="check_call">+49 6636 363 anrufen</a><a class="btn btn-secondary" href="mailto:info@viehhandlung-hamel.de?subject=Anfrage%20zur%20Tiervermarktung" data-track="check_mail">E-Mail senden</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" aria-labelledby="contact-title"><div class="wrap contact-grid"><div class="reveal"><div class="eyebrow">Persönlicher Kontakt</div><h2 id="contact-title" class="display">Kurze Wege beginnen mit einem Gespräch.</h2></div><div class="contact-card reveal"><div class="contact-row"><span>Telefon</span><b><a href="tel:+496636363" data-track="contact_call">+49 (0)6636 363</a></b></div><div class="contact-row"><span>E-Mail</span><b><a href="mailto:info@viehhandlung-hamel.de" data-track="contact_mail">info@viehhandlung-hamel.de</a></b></div><div class="contact-row"><span>Standort</span><b>Billertshäuser Str. 1<br>36329 Romrod</b></div><div class="contact-row"><span>Unternehmen</span><b>Volker Hamel GmbH</b></div></div></div></section>
 </main>
+<footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><strong>HAMEL</strong><small>Landwirtschaft · Tiervermarktung · Logistik</small></div><div class="footer-meta"><a href="https://www.viehhandlung-hamel.de/" rel="noopener">Bestehende Website</a><a href="mailto:info@viehhandlung-hamel.de">Kontakt</a></div></div><div class="legal-note">Website-Konzept / Demo · nicht indexiert. * Größenordnung laut Unternehmensmitteilung zur Beteiligung von SIMON-Fleisch (2022). Finale Inhalte, Bildrechte, Rechtstexte und Unternehmensangaben sind vor Veröffentlichung durch den Kunden zu bestätigen.</div></div></footer>
+<div class="mobile-cta"><a href="#check" data-track="mobile_check">Vermarktung besprechen</a></div>
 <script>
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const reveals = document.querySelectorAll('.reveal');
-  if(reduced){ reveals.forEach(el=>el.classList.add('is-visible')); }
-  else {
-    const io = new IntersectionObserver(entries=>entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }}),{threshold:.12});
-    reveals.forEach(el=>io.observe(el));
-  }
+  const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const track=(name,props={})=>{window.hamelDemoEvents=window.hamelDemoEvents||[];window.hamelDemoEvents.push({name,props,ts:Date.now()});window.dispatchEvent(new CustomEvent('hamel:conversion',{detail:{name,props}}));};
+  document.querySelectorAll('[data-track]').forEach(el=>el.addEventListener('click',()=>track(el.dataset.track,{href:el.getAttribute('href')||''})));
 
-  const route = document.querySelector('.route');
-  const steps = [...document.querySelectorAll('.route-step')];
-  if(route){
-    const rio = new IntersectionObserver(([entry])=>{ if(entry.isIntersecting) route.classList.add('is-live'); },{threshold:.18});
-    rio.observe(route);
-    const setActive = ()=>{
-      let closest = 0, best = Infinity;
-      const targetY = innerHeight*.5;
-      steps.forEach((step,i)=>{ const r=step.getBoundingClientRect(); const d=Math.abs((r.top+r.height*.5)-targetY); if(d<best){best=d;closest=i;} });
-      steps.forEach((s,i)=>s.classList.toggle('active',i===closest));
-    };
-    addEventListener('scroll',setActive,{passive:true}); setActive();
-  }
+  if(!reduceMotion){
+    const revealObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+  }else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
 
-  document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.addEventListener('click',()=>window.dataLayer?.push({event:'cta_primary_click',section:a.closest('section')?.id||'nav'})));
+  const steps=[...document.querySelectorAll('.route-step')], summary=document.getElementById('routeSummary'), routeText=document.getElementById('routeText'), progress=document.getElementById('routeProgress');
+  const setStep=(step,i)=>{steps.forEach(s=>s.classList.toggle('active',s===step));summary.textContent=step.dataset.title;routeText.textContent=step.dataset.copy;progress.style.width=((i+1)/steps.length*100)+'%';};
+  const stepObserver=new IntersectionObserver(entries=>{entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio).slice(0,1).forEach(e=>setStep(e.target,steps.indexOf(e.target)))},{rootMargin:'-35% 0px -45% 0px',threshold:[0,.2,.5,.8]});steps.forEach(s=>stepObserver.observe(s));
+
+  const proofData={
+    history:{big:'200+',heading:'Über zwei Jahrhunderte am selben Standort verwurzelt.',copy:'Die Unternehmensgeschichte reicht laut Unternehmensdarstellung mehr als 200 Jahre zurück. Aus dem ursprünglichen Schafhandel entwickelte sich über Generationen ein überregional tätiges Vermarktungsunternehmen.',source:'Quelle: Unternehmensmitteilung SIMON-Fleisch / HAMEL'},
+    generation:{big:'7.',heading:'Sieben Generationen statt kurzfristiger Marktauftritt.',copy:'Johannes Hamel steht für die siebte Generation der Unternehmerfamilie. Diese Kontinuität ist kein Selbstzweck – sie erklärt gewachsene Beziehungen, Branchenkenntnis und Verantwortung für den Namen.',source:'Quelle: Unternehmensmitteilung SIMON-Fleisch / HAMEL'},
+    volume:{big:'≈500k',heading:'Eine Größenordnung, die operative Erfahrung sichtbar macht.',copy:'Zum Zeitpunkt der veröffentlichten Unternehmensmitteilung wurden rund 500.000 Schweine pro Jahr vermarktet. Die Zahl wird hier bewusst mit Zeitraum und Quelle gezeigt statt als unbelegter Marketing-Superlativ.',source:'Quelle: Unternehmensmitteilung SIMON-Fleisch, 2022'},
+    leadership:{big:'2023',heading:'Klare Verantwortung in der nächsten Generation.',copy:'Seit 2023 führt Johannes Hamel die Volker Hamel GmbH als alleiniger Geschäftsführer. Gleichzeitig wurde SIMON-Fleisch Holding GmbH Gesellschafterin des Unternehmens.',source:'Quelle: Unternehmensmitteilung SIMON-Fleisch'}
+  };
+  const tabs=[...document.querySelectorAll('.proof-tab')];tabs.forEach(tab=>tab.addEventListener('click',()=>{tabs.forEach(t=>t.setAttribute('aria-selected',String(t===tab)));const d=proofData[tab.dataset.key];document.getElementById('proofBig').textContent=d.big;document.getElementById('proofHeading').textContent=d.heading;document.getElementById('proofCopy').textContent=d.copy;document.getElementById('proofSource').textContent=d.source;track('proof_open',{proof:tab.dataset.key});}));
+
+  const state={animal:'',size:'',time:''};
+  document.querySelectorAll('.choice').forEach(btn=>btn.addEventListener('click',()=>{const group=btn.dataset.group;document.querySelectorAll('.choice[data-group="'+group+'"]').forEach(b=>b.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');state[group]=btn.dataset.value;track('check_choice',{group,value:btn.dataset.value});updateResult();}));
+  function updateResult(){const complete=state.animal&&state.size&&state.time;const title=document.getElementById('resultTitle'),copy=document.getElementById('resultCopy');if(!complete){title.textContent='Direkt und unkompliziert abstimmen.';copy.textContent='Wählen Sie links drei Punkte aus. Die Demo passt den nächsten Schritt anschließend an Ihre Situation an.';return;}if(state.time==='Kurzfristig'){title.textContent='Am besten direkt telefonisch abstimmen.';copy.textContent=`${state.animal}, ${state.size.toLowerCase()}, kurzfristig: Ein direktes Gespräch ist hier der schnellste Weg, damit Verfügbarkeit und nächster Schritt sofort geklärt werden können.`;}else if(state.time==='Erst informieren'){title.textContent='Erst Orientierung, dann Entscheidung.';copy.textContent=`Für ${state.animal.toLowerCase()} mit dem Umfang „${state.size}“ reicht zunächst eine kurze E-Mail. Im finalen System würde daraus automatisch die passende Informationsstrecke entstehen.`;}else{title.textContent='Planbare Anfrage – ideal für einen kurzen Rückruf.';copy.textContent=`${state.animal}, ${state.size.toLowerCase()}, planbarer Zeitraum: Die wichtigsten Eckdaten sind vorhanden. Im finalen System könnte HAMEL die Anfrage direkt in die Disposition übernehmen.`;}track('check_complete',{...state});}
 </script>
 </body>
 </html>
